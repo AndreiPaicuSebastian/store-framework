@@ -1,12 +1,14 @@
 {
   "store.home": {
     "blocks": [
-      "rich-text",
       "info-card#button-left",
       "info-card#button-right",
       "flex-layout.row",
       "shelf",
-      "slider-layout#home"
+      "slider-layout#home",
+      "rich-text",
+      "image#desktop",
+      "image#mobile"
     ]
   },
   "slider-layout#home": {
@@ -25,6 +27,13 @@
       }
     }
   },
+  "rich-text": {
+    "props": {
+      "text": "# Your Coffee, Your Way \n ### New Coffee Makers Collection",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  },
   "flex-layout.col": {
     "children": [
       "image#electronics",
@@ -36,12 +45,6 @@
       "info-card#rethink",
       "flex-layout.col"
     ]
-  },
-  "rich-text": {
-    "props": {
-      "text": "**Hello, World!**", //add
-      "textPosition": "RIGHT"
-    }
   },
   "info-card#button-left": {
     "props": {
@@ -90,6 +93,50 @@
     "props": {
       "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/major_appliance_banner___bb10093866a127345ddfbcca3efa5022.png",
       "maxWidth": "100%"
+    }
+  },
+  "responsive-layout.desktop#desktop": {
+    "children": [
+      "rich-text#desktop",
+      "image#desktop"
+    ]
+  },
+  "responsive-layout.mobile#mobile": {
+    "children": [
+      "rich-text#mobile",
+      "image#mobile"
+    ]
+  },
+  "rich-text#desktop": {
+    "props": {
+      "text": "### Your Coffee, Your Way \n #### New Coffee Makers Collection",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#mobile": {
+    "props": {
+      "text": "### Your Coffee, Your Way \n #### New Coffee Makers Collection",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  },
+  "image#desktop": {
+    "props": {
+      "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Desktop.jpg?q=1",
+      "link": {
+        "url": "/small-appliances/coffee-makers"
+      },
+      "alt": "Coffee Makers Collection"
+    }
+  },
+  "image#mobile": {
+    "props": {
+      "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Mobile.jpg?q=1",
+      "link": {
+        "url": "/small-appliances/coffee-makers"
+      },
+      "alt": "Coffee Makers Collection"
     }
   }
 }
